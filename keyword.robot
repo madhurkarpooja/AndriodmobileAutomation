@@ -13,3 +13,18 @@ Library  AppiumLibrary
 Open ManufApp Application
     [Documentation]    This keyword opens the already installed ManufApp application.
     Open Application    ${APPIUM_SERVER_URL}    platformName=${PLATFORM_NAME}    deviceName=${DEVICE_NAME}    appPackage=${APP_PACKAGE}    appActivity=${APP_ACTIVITY}    automationName=${AUTOMATION_NAME}
+
+
+Login ManufApp
+     Open ManufApp Application
+     click element    ${loginbutton}
+     wait until element is visible    ${email}  timeout=60
+     Click Element    ${email}
+     input text  ${email}  admin@smart.com
+     wait until element is visible    ${password}  timeout=30
+     Click Element    ${password}
+     input password   ${password}  271828
+     click element  ${right}
+     click element  ${continue}
+     Wait Until Element Is Visible    xpath=//android.widget.ImageView[@content-desc="testingsiteautomation"]    timeout=30
+
