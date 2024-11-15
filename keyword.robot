@@ -20,11 +20,13 @@ Login ManufApp
      click element    ${loginbutton}
      wait until element is visible    ${email}  timeout=60
      Click Element    ${email}
-     input text  ${email}  admin@smart.com
+     input text  ${email}  pooja_dev@testing.com
      wait until element is visible    ${password}  timeout=30
      Click Element    ${password}
-     input password   ${password}  271828
+     input password   ${password}  4652049559
      click element  ${right}
      click element  ${continue}
-     Wait Until Element Is Visible    xpath=//android.widget.ImageView[@content-desc="testingsiteautomation"]    timeout=30
+     Wait Until Element Is Visible    //android.widget.ImageView[@content-desc="testingsiteautomation"]  timeout=30
+
+
 
