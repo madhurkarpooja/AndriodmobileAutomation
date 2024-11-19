@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.0 on win32)" generated="2024-11-14T12:44:51.116468" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests-Dontimecreation" source="C:\Users\user\PycharmProjects\AndriodmobileAutomation\Downtime\tests-dontimecreation.robot">
+<test id="s1-t1" name="Downtime creation" line="15">
+<kw name="Login ManufApp" owner="keyword">
+<kw name="Open ManufApp Application" owner="keyword">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${APPIUM_SERVER_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-11-14T12:44:51.322495" elapsed="10.385069"/>
+</kw>
+<doc>This keyword opens the already installed ManufApp application.</doc>
+<status status="PASS" start="2024-11-14T12:44:51.322495" elapsed="10.385069"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-11-14T12:45:01.708701" level="INFO">Clicking element '//android.widget.Button'.</msg>
+<msg time="2024-11-14T12:45:14.545429" level="INFO">xpath criteria: //android.widget.Button</msg>
+<arg>${loginbutton}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-11-14T12:45:01.707564" elapsed="12.837865"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>${email}</arg>
+<arg>timeout=60</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-11-14T12:45:14.545429" elapsed="0.109430"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-11-14T12:45:14.654859" level="INFO">Clicking element 'android=new UiSelector().className("android.widget.EditText").instance(0)'.</msg>
+<arg>${email}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-11-14T12:45:14.654859" elapsed="1.099568"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-11-14T12:45:15.754427" level="INFO">Typing text 'pooja_dev@testing.com' into text field 'android=new UiSelector().className("android.widget.EditText").instance(0)'</msg>
+<arg>${email}</arg>
+<arg>pooja_dev@testing.com</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-11-14T12:45:15.754427" elapsed="0.148082"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-11-14T12:45:16.502389" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]</msg>
+<arg>${password}</arg>
+<arg>timeout=30</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-11-14T12:45:15.902509" elapsed="0.599880"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-11-14T12:45:16.502389" level="INFO">Clicking element '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]'.</msg>
+<msg time="2024-11-14T12:45:17.262490" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]</msg>
+<arg>${password}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-11-14T12:45:16.502389" elapsed="0.760101"/>
+</kw>
+<kw name="Input Password" owner="AppiumLibrary">
+<msg time="2024-11-14T12:45:17.262490" level="INFO">Typing password into text field '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]'</msg>
+<msg time="2024-11-14T12:45:17.364775" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]</msg>
+<arg>${password}</arg>
+<arg>4652049559</arg>
+<doc>Types the given password into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-11-14T12:45:17.262490" elapsed="0.102285"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-11-14T12:45:17.364775" level="INFO">Clicking element '//android.widget.ImageView'.</msg>
+<msg time="2024-11-14T12:45:18.502923" level="INFO">xpath criteria: //android.widget.ImageView</msg>
+<arg>${right}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-11-14T12:45:17.364775" elapsed="1.138148"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-11-14T12:45:18.502923" level="INFO">Clicking element '//android.view.View[@content-desc='Continue']'.</msg>
+<msg time="2024-11-14T12:45:18.634683" level="INFO">xpath criteria: //android.view.View[@content-desc='Continue']</msg>
+<arg>${continue}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-11-14T12:45:18.502923" elapsed="0.131760"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-11-14T12:45:20.904151" level="INFO">xpath criteria: //android.widget.ImageView[@content-desc="testingsiteautomation"]
+xpath criteria: //android.widget.ImageView[@content-desc="testingsiteautomation"]</msg>
+<arg>//android.widget.ImageView[@content-desc="testingsiteautomation"]</arg>
+<arg>timeout=30</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-11-14T12:45:18.634683" elapsed="2.269468"/>
+</kw>
+<status status="PASS" start="2024-11-14T12:44:51.322495" elapsed="29.581656"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-11-14T12:45:20.907995" level="INFO">Clicking element '//android.widget.ImageView[@content-desc="Downtime
+View More"]'.</msg>
+<msg time="2024-11-14T12:45:22.025533" level="INFO">xpath criteria: //android.widget.ImageView[@content-desc="Downtime
+View More"]</msg>
+<arg>${downtime}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-11-14T12:45:20.906990" elapsed="1.118543"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-14T12:45:23.026895" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-14T12:45:22.026345" elapsed="1.000900"/>
+</kw>
+<kw name="Click Element At Coordinates" owner="AppiumLibrary">
+<msg time="2024-11-14T12:45:23.027575" level="WARN">Keyword 'AppiumLibrary.Click Element At Coordinates' is deprecated. Since selenium v4, use other keywords.</msg>
+<msg time="2024-11-14T12:45:23.028348" level="INFO">Pressing at (281, 165).</msg>
+<arg>281</arg>
+<arg>165</arg>
+<doc>*DEPRECATED!!* Since selenium v4, use other keywords.</doc>
+<status status="PASS" start="2024-11-14T12:45:23.027575" elapsed="1.084797"/>
+</kw>
+<status status="PASS" start="2024-11-14T12:44:51.322495" elapsed="32.789877"/>
+</test>
+<status status="PASS" start="2024-11-14T12:44:51.116468" elapsed="32.999245"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests-Dontimecreation">Tests-Dontimecreation</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-11-14T12:45:23.027575" level="WARN">Keyword 'AppiumLibrary.Click Element At Coordinates' is deprecated. Since selenium v4, use other keywords.</msg>
+</errors>
+</robot>
