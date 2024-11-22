@@ -29,4 +29,7 @@ Login ManufApp
      Wait Until Element Is Visible    //android.widget.ImageView[@content-desc="testingsiteautomation"]  timeout=30
 
 
-
+Get Element
+    [Arguments]    ${locator}
+    ${element}    Find Element    ${locator}
+    [Return]    ${element}
