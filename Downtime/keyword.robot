@@ -8,6 +8,10 @@ Library    String
 Library    DateTime
 Library    BuiltIn
 
+*** Variables ***
+${START_X}    100   # Starting X coordinate (example)
+${START_Y}    200   # Starting Y coordinate (example)
+${SWIPE_LENGTH}    500  # The distance that the swipe should cover (you can adjust this based on your UI).
 
 *** Keywords ***
 
@@ -22,26 +26,23 @@ Click button
     [Arguments]  ${buttonname}
     Click Element    //android.widget.Button[@content-desc="${buttonname}"]
 
-Calculate Position
-    [Arguments]    ${target_time}
-    ${hour}    ${minute} =    Split String    ${target_time}    :
-    ${hour} =    Convert To Integer    ${hour}
-    ${minute} =    Convert To Integer    ${minute}
-    ${position} =    Evaluate    (${hour} * 100 / 24) + (${minute} * 100 / 1440)
-    RETURN    ${position}
+Scroll Vertically
+    [Arguments]    ${element}    ${start}=0.9    ${end}=0.1
+    ${bounds_str}=    AppiumLibrary.Get Element Attribute    ${element}    bounds
+    ${bounds}=    Evaluate    [list(map(int, coord.split(','))) for coord in "${bounds_str}"[1:-1].split('][')]
+    ${x_start}=    Evaluate    (${bounds}[0][0] + ${bounds}[1][0]) / 2
+    ${y_start}=    Evaluate    ${bounds}[0][1] + (${start} * (${bounds}[1][1] - ${bounds}[0][1]))
+    ${y_end}=      Evaluate    ${bounds}[0][1] + (${end} * (${bounds}[1][1] - ${bounds}[0][1]))
+    AppiumLibrary.Swipe    ${x_start}    ${y_start}    ${x_start}    ${y_end}    2000
+
+Scroll Hour And Minute Picker
+    [Arguments]    ${start_x}    ${start_y}    ${end_x}    ${end_y}
+    Log To Console    Scrolling from (${start_x}, ${start_y}) to (${end_x}, ${end_y})
+    AppiumLibrary.Swipe    ${start_x}    ${start_y}    ${end_x}    ${end_y}    2000
 
 
-Scroll Seekbar By Position
-    [Arguments]    ${position}
-    ${start_x} =    Set Variable    500
-    ${start_y} =    Set Variable    1500
-    ${end_x} =      Set Variable    500
-    ${end_y} =      Evaluate    ${start_y} - (${position} * 10)  # Adjust scaling factor as needed
-    Swipe    ${start_x}    ${start_y}    ${end_x}    ${end_y}
 
-Calculate Time Difference
-    [Arguments]    ${time1}    ${time2}
-    ${datetime1} =    Convert Date    ${time1}    %H:%M
-    ${datetime2} =    Convert Date    ${time2}    %H:%M
-    ${time_delta} =    Subtract Date From Date    ${datetime1}    ${datetime2}
-    [Return]    ${time_delta}
+
+
+
+
