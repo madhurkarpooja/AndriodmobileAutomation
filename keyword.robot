@@ -33,3 +33,4 @@ Get Element
     [Arguments]    ${locator}
     ${element}    Find Element    ${locator}
     [Return]    ${element}
+
