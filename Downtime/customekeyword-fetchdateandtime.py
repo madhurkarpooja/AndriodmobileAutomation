@@ -34,3 +34,10 @@ def scroll_hour_and_minute_picker(start_x, start_y, end_x, end_y):
     # Perform swipe action
     driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_capabilities)
     driver.swipe(start_x, start_y, end_x, end_y, 2000)
+
+
+def get_date_with_ordinal():
+    day = datetime.now().day
+    suffix = 'th' if 11 <= day <= 13 else {1: 'st', 2: 'nd', 3: 'rd'}.get(day % 10, 'th')
+    formatted_date = f"{day}{suffix} {datetime.now().strftime('%b %y')}"
+    return formatted_date

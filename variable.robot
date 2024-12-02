@@ -9,5 +9,9 @@ ${loginbutton}  //android.widget.Button
 ${email}  android=new UiSelector().className("android.widget.EditText").instance(0)
 ${password}  //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]
 ${continue}  //android.view.View[@content-desc='Continue']
-
 ${right}  //android.widget.ImageView
+${urlaws}  https://dev.manuf.app/
+${emailweb}  //input[@name = "email"]
+${passwordweb}  //input[@name = "password"]
+${forgotPassword}  //button[text() = "Forgot password?"]
+${signInweb}  //div[text() = "Sign In"]
