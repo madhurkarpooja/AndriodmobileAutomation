@@ -11,7 +11,7 @@ ${password}  //android.widget.FrameLayout[@resource-id="android:id/content"]/and
 ${continue}  //android.view.View[@content-desc='Continue']
 ${right}  //android.widget.ImageView
 ${urlaws}  https://dev.manuf.app/
-${emailweb}  //input[@name = "email"]
+${emailweb}  //input[@id="mobileEmail"]
 ${passwordweb}  //input[@name = "password"]
 ${forgotPassword}  //button[text() = "Forgot password?"]
 ${signInweb}  //div[text() = "Sign In"]
