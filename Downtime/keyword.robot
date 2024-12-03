@@ -70,12 +70,12 @@ Get All Times
         Append To List    ${start_times}    ${time}
     END
     Log    Only Times: ${start_times}
-    [Return]    ${start_times}
+    RETURN    ${start_times}
 
 Extract Time From Log
     [Arguments]    ${log_entry}
     ${time}=    Evaluate    '${log_entry}'.split()[-1]
-    [Return]    ${time}
+    RETURN    ${time}
 
 
 
