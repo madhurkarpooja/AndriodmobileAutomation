@@ -23,7 +23,7 @@ ${MINUTE_SEEK_BAR}    Get WebElement    ${MINUTE_SEEK_BAR_XPATH}
 
 
 *** Test Cases ***
-Downtime creation
+Downtime creation on App
     Login ManufApp
     A.Click Element   ${downtime}
     sleep  1
@@ -60,7 +60,8 @@ Downtime creation
     A.Wait Until Element Is Visible   //android.view.View[contains(@content-desc, "IssueShutoff")]
     sleep  1
     A.Close Application
-    #Login on Website and Validation is Downtime created from App is visible
+
+    #Login on Website and Validation is Downtime created from App is visible on Website
     sleep  1
     login devsite on website
     sleep  1
