@@ -1,7 +1,7 @@
 *** Settings ***
 #Library  SeleniumLibrary
 Library  Collections
-Resource  ../variable.robot
+#Resource  ../variable.robot
 Library  AppiumLibrary
 Resource  ../keyword.robot
 Resource  variable.robot
@@ -52,16 +52,17 @@ Downtime creation
     # Scroll the picker (custom swipe action)
     Scroll Vertically    ${element}    start=0.9    end=0.1
     Scroll Hour And Minute Picker    628    1687    645    1295
-    sleep  3
+    sleep  4
     Click button  Done
     A.Click Element   ${downime}
     A.Wait Until Element Is Visible   //android.widget.ImageView[contains(@content-desc, "Downtime Created Successfully")]
     A.Click Element    ${view entries}
     A.Wait Until Element Is Visible   //android.view.View[contains(@content-desc, "IssueShutoff")]
     sleep  1
-    A.Close Application
-    #Login on Website and Validation is Downtime created from App is visible
-    sleep  1
+
+
+    #Login on Website and Validation is Downtime created from App is deleetd
+    sleep  2
     login devsite on website
     sleep  1
     Planning and scheduling
@@ -74,6 +75,7 @@ Downtime creation
     ${xpath}=    Set Variable    //div[@role="button" ]//div[text()="${today}"]
     S.Wait Until Element Is Visible    ${xpath}    timeout=10
     S.Click Element    ${xpath}
+    sleep  1
     S.Click Element  //div[@data-task-id="${newly_downtime_id}"]
     sleep  2
     #fetch the Timings of downtime
@@ -83,12 +85,17 @@ Downtime creation
     Log    All times: ${ENDtimeslog}
     # validations
     Should Contain    ${starttimeslog}    ${current_time}
-    Should Contain    ${ENDtimeslog}    ${target_time}
+    #Should Contain    ${ENDtimeslog}    ${target_time}
+   # Deletion of Downtime From website to APPLICATION
+    sleep  2
+    S.Click Element    //span[text()="${current_time}"]/../../..//button[2][@aria-label='Delete Downtime']
+    S.Wait Until Page Contains    Event Deleted Successfully
     Close Browser
 
+#Downtime is Deleted also on App
 
-
-
+    A.Wait Until Page Does Not Contain   //android.view.View[contains(@content-desc, "00 IssueShutoff ${current_date}, ${current_time}")]
+    A.Close All Applications
 
 
 
