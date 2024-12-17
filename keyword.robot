@@ -18,6 +18,8 @@ Open ManufApp Application
 
 Login ManufApp
      Open ManufApp Application
+     sleep  1
+     A.wait until element is visible    ${loginbutton}  timeout=60
      A.click element    ${loginbutton}
      A.wait until element is visible    ${email}  timeout=60
      A.Click Element    ${email}
@@ -36,7 +38,7 @@ Get Element
     RETURN    ${element}
 
 login devsite on website
-    S.open browser  ${urlaws}  chrome  options=add_argument("--headless")
+    S.open browser  ${urlaws}  chrome  #options=add_argument("--headless")
     S.maximize browser window
     sleep  1
     S.Wait Until Element Is Visible   ${emailweb}

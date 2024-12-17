@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.0 on win32)" generated="2024-12-06T12:23:19.545557" rpa="false" schemaversion="5">
-<suite id="s1" name="Tests-Downtimedelete" source="C:\Users\user\PycharmProjects\AndriodmobileAutomation\Downtime\tests-downtimedelete.robot">
-<test id="s1-t1" name="Downtime creation" line="26">
+<robot generator="Robot 7.0 (Python 3.12.0 on win32)" generated="2024-12-16T14:17:23.889131" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests-Downtimecreation" source="C:\Users\user\PycharmProjects\AndriodmobileAutomation\Downtime\tests-downtimecreation.robot">
+<test id="s1-t1" name="Downtime creation on App" line="26">
 <kw name="Login ManufApp" owner="keyword">
 <kw name="Open ManufApp Application" owner="keyword">
 <kw name="Open Application" owner="A">
@@ -18,307 +18,322 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2024-12-06T12:23:19.808472" elapsed="11.895347"/>
+<status status="PASS" start="2024-12-16T14:17:24.198130" elapsed="12.384164"/>
 </kw>
 <doc>This keyword opens the already installed ManufApp application.</doc>
-<status status="PASS" start="2024-12-06T12:23:19.808472" elapsed="11.895347"/>
+<status status="PASS" start="2024-12-16T14:17:24.198130" elapsed="12.384164"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-16T14:17:37.583721" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-16T14:17:36.583317" elapsed="1.000404"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="A">
+<msg time="2024-12-16T14:17:50.603620" level="INFO">xpath criteria: //android.widget.Button
+xpath criteria: //android.widget.Button</msg>
+<arg>${loginbutton}</arg>
+<arg>timeout=60</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-12-16T14:17:37.583721" elapsed="13.020508"/>
 </kw>
 <kw name="Click Element" owner="A">
-<msg time="2024-12-06T12:23:31.706132" level="INFO">Clicking element '//android.widget.Button'.</msg>
-<msg time="2024-12-06T12:23:44.448142" level="INFO">xpath criteria: //android.widget.Button</msg>
+<msg time="2024-12-16T14:17:50.604229" level="INFO">Clicking element '//android.widget.Button'.</msg>
+<msg time="2024-12-16T14:17:51.390365" level="INFO">xpath criteria: //android.widget.Button</msg>
 <arg>${loginbutton}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-06T12:23:31.705130" elapsed="12.743012"/>
+<status status="PASS" start="2024-12-16T14:17:50.604229" elapsed="0.786136"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="A">
 <arg>${email}</arg>
 <arg>timeout=60</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-12-06T12:23:44.448142" elapsed="0.107647"/>
+<status status="PASS" start="2024-12-16T14:17:51.398383" elapsed="0.160121"/>
 </kw>
 <kw name="Click Element" owner="A">
-<msg time="2024-12-06T12:23:44.555789" level="INFO">Clicking element 'android=new UiSelector().className("android.widget.EditText").instance(0)'.</msg>
+<msg time="2024-12-16T14:17:51.564251" level="INFO">Clicking element 'android=new UiSelector().className("android.widget.EditText").instance(0)'.</msg>
 <arg>${email}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-06T12:23:44.555789" elapsed="1.143342"/>
+<status status="PASS" start="2024-12-16T14:17:51.558504" elapsed="0.251153"/>
 </kw>
 <kw name="Input Text" owner="A">
-<msg time="2024-12-06T12:23:45.699131" level="INFO">Typing text 'pooja_dev@testing.com' into text field 'android=new UiSelector().className("android.widget.EditText").instance(0)'</msg>
+<msg time="2024-12-16T14:17:51.809657" level="INFO">Typing text 'pooja_dev@testing.com' into text field 'android=new UiSelector().className("android.widget.EditText").instance(0)'</msg>
 <arg>${email}</arg>
 <arg>pooja_dev@testing.com</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2024-12-06T12:23:45.699131" elapsed="0.139238"/>
+<status status="PASS" start="2024-12-16T14:17:51.809657" elapsed="1.248473"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="A">
-<msg time="2024-12-06T12:23:46.414487" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]</msg>
+<msg time="2024-12-16T14:17:53.718191" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]</msg>
 <arg>${password}</arg>
 <arg>timeout=30</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-12-06T12:23:45.842394" elapsed="0.572093"/>
+<status status="PASS" start="2024-12-16T14:17:53.058130" elapsed="0.660061"/>
 </kw>
 <kw name="Click Element" owner="A">
-<msg time="2024-12-06T12:23:46.420993" level="INFO">Clicking element '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]'.</msg>
-<msg time="2024-12-06T12:23:46.542725" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]</msg>
+<msg time="2024-12-16T14:17:53.725381" level="INFO">Clicking element '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]'.</msg>
+<msg time="2024-12-16T14:17:53.959204" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]</msg>
 <arg>${password}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-06T12:23:46.414487" elapsed="0.128238"/>
+<status status="PASS" start="2024-12-16T14:17:53.718191" elapsed="0.241013"/>
 </kw>
 <kw name="Input Password" owner="A">
-<msg time="2024-12-06T12:23:46.542725" level="INFO">Typing password into text field '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]'</msg>
-<msg time="2024-12-06T12:23:47.219584" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]</msg>
+<msg time="2024-12-16T14:17:53.968232" level="INFO">Typing password into text field '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]'</msg>
+<msg time="2024-12-16T14:17:55.068318" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]</msg>
 <arg>${password}</arg>
 <arg>4652049559</arg>
 <doc>Types the given password into text field identified by `locator`.</doc>
-<status status="PASS" start="2024-12-06T12:23:46.542725" elapsed="0.676859"/>
+<status status="PASS" start="2024-12-16T14:17:53.959204" elapsed="1.109114"/>
 </kw>
 <kw name="Click Element" owner="A">
-<msg time="2024-12-06T12:23:47.219584" level="INFO">Clicking element '//android.widget.ImageView'.</msg>
-<msg time="2024-12-06T12:23:47.805251" level="INFO">xpath criteria: //android.widget.ImageView</msg>
+<msg time="2024-12-16T14:17:55.068318" level="INFO">Clicking element '//android.widget.ImageView'.</msg>
+<msg time="2024-12-16T14:17:55.798334" level="INFO">xpath criteria: //android.widget.ImageView</msg>
 <arg>${right}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-06T12:23:47.219584" elapsed="0.585667"/>
+<status status="PASS" start="2024-12-16T14:17:55.068318" elapsed="0.730016"/>
 </kw>
 <kw name="Click Element" owner="A">
-<msg time="2024-12-06T12:23:47.813901" level="INFO">Clicking element '//android.view.View[@content-desc='Continue']'.</msg>
-<msg time="2024-12-06T12:23:49.281503" level="INFO">xpath criteria: //android.view.View[@content-desc='Continue']</msg>
+<msg time="2024-12-16T14:17:55.798334" level="INFO">Clicking element '//android.view.View[@content-desc='Continue']'.</msg>
+<msg time="2024-12-16T14:17:56.913485" level="INFO">xpath criteria: //android.view.View[@content-desc='Continue']</msg>
 <arg>${continue}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-06T12:23:47.813192" elapsed="1.468311"/>
+<status status="PASS" start="2024-12-16T14:17:55.798334" elapsed="1.115151"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="A">
-<msg time="2024-12-06T12:23:50.346696" level="INFO">xpath criteria: //android.widget.ImageView[@content-desc="testingsiteautomation"]
+<msg time="2024-12-16T14:17:59.024243" level="INFO">xpath criteria: //android.widget.ImageView[@content-desc="testingsiteautomation"]
+xpath criteria: //android.widget.ImageView[@content-desc="testingsiteautomation"]
 xpath criteria: //android.widget.ImageView[@content-desc="testingsiteautomation"]</msg>
 <arg>//android.widget.ImageView[@content-desc="testingsiteautomation"]</arg>
 <arg>timeout=30</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-12-06T12:23:49.281503" elapsed="1.065193"/>
+<status status="PASS" start="2024-12-16T14:17:56.913485" elapsed="2.110758"/>
 </kw>
-<status status="PASS" start="2024-12-06T12:23:19.801854" elapsed="30.544842"/>
+<status status="PASS" start="2024-12-16T14:17:24.198130" elapsed="34.826113"/>
 </kw>
 <kw name="Click Element" owner="A">
-<msg time="2024-12-06T12:23:50.353733" level="INFO">Clicking element '//android.widget.ImageView[@content-desc="Downtime
+<msg time="2024-12-16T14:17:59.028054" level="INFO">Clicking element '//android.widget.ImageView[@content-desc="Downtime
 View More"]'.</msg>
-<msg time="2024-12-06T12:23:50.479914" level="INFO">xpath criteria: //android.widget.ImageView[@content-desc="Downtime
+<msg time="2024-12-16T14:18:00.316218" level="INFO">xpath criteria: //android.widget.ImageView[@content-desc="Downtime
 View More"]</msg>
 <arg>${downtime}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-06T12:23:50.346696" elapsed="0.133218"/>
+<status status="PASS" start="2024-12-16T14:17:59.024243" elapsed="1.291975"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-06T12:23:51.480227" level="INFO">Slept 1 second.</msg>
+<msg time="2024-12-16T14:18:01.316898" level="INFO">Slept 1 second.</msg>
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-06T12:23:50.479914" elapsed="1.000313"/>
+<status status="PASS" start="2024-12-16T14:18:00.316218" elapsed="1.000680"/>
 </kw>
 <kw name="Click Element At Coordinates" owner="A">
-<msg time="2024-12-06T12:23:51.480227" level="WARN">Keyword 'A.Click Element At Coordinates' is deprecated. Since selenium v4, use other keywords.</msg>
-<msg time="2024-12-06T12:23:51.485875" level="INFO">Pressing at (281, 165).</msg>
-<arg>281</arg>
-<arg>165</arg>
+<msg time="2024-12-16T14:18:01.318066" level="WARN">Keyword 'A.Click Element At Coordinates' is deprecated. Since selenium v4, use other keywords.</msg>
+<msg time="2024-12-16T14:18:01.318066" level="INFO">Pressing at (141, 88).</msg>
+<arg>141</arg>
+<arg>88</arg>
 <doc>*DEPRECATED!!* Since selenium v4, use other keywords.</doc>
-<status status="PASS" start="2024-12-06T12:23:51.480227" elapsed="0.950396"/>
+<status status="PASS" start="2024-12-16T14:18:01.318066" elapsed="0.975317"/>
 </kw>
 <kw name="Select Machine" owner="keyword">
 <kw name="Click Element" owner="A">
-<msg time="2024-12-06T12:23:52.438686" level="INFO">Clicking element '//android.view.View[@content-desc="Moulding Machine"]'.</msg>
-<msg time="2024-12-06T12:23:53.513067" level="INFO">xpath criteria: //android.view.View[@content-desc="Moulding Machine"]</msg>
+<msg time="2024-12-16T14:18:02.298402" level="INFO">Clicking element '//android.view.View[@content-desc="Moulding Machine"]'.</msg>
+<msg time="2024-12-16T14:18:02.498178" level="INFO">xpath criteria: //android.view.View[@content-desc="Moulding Machine"]</msg>
 <arg>//android.view.View[@content-desc="${machinename}"]</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-06T12:23:52.438686" elapsed="1.074381"/>
+<status status="PASS" start="2024-12-16T14:18:02.297892" elapsed="0.200286"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-06T12:23:54.514973" level="INFO">Slept 1 second.</msg>
+<msg time="2024-12-16T14:18:03.498772" level="INFO">Slept 1 second.</msg>
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-06T12:23:53.514100" elapsed="1.000873"/>
+<status status="PASS" start="2024-12-16T14:18:02.498178" elapsed="1.000594"/>
 </kw>
 <arg>${machienname}[0]</arg>
-<status status="PASS" start="2024-12-06T12:23:52.430623" elapsed="2.084350"/>
+<status status="PASS" start="2024-12-16T14:18:02.293383" elapsed="1.205389"/>
 </kw>
 <kw name="Click Element" owner="A">
-<msg time="2024-12-06T12:23:54.520056" level="INFO">Clicking element '//android.view.View[@content-desc="Enter Downtime"]'.</msg>
-<msg time="2024-12-06T12:23:55.727461" level="INFO">xpath criteria: //android.view.View[@content-desc="Enter Downtime"]</msg>
+<msg time="2024-12-16T14:18:03.505374" level="INFO">Clicking element '//android.view.View[@content-desc="Enter Downtime"]'.</msg>
+<msg time="2024-12-16T14:18:03.908177" level="INFO">xpath criteria: //android.view.View[@content-desc="Enter Downtime"]</msg>
 <arg>${downtimebutton}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-06T12:23:54.514973" elapsed="1.212488"/>
+<status status="PASS" start="2024-12-16T14:18:03.498772" elapsed="0.409405"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-06T12:23:56.735800" level="INFO">Slept 1 second.</msg>
+<msg time="2024-12-16T14:18:04.908311" level="INFO">Slept 1 second.</msg>
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-06T12:23:55.727461" elapsed="1.008339"/>
+<status status="PASS" start="2024-12-16T14:18:03.908177" elapsed="1.000134"/>
 </kw>
 <kw name="Select Machine" owner="keyword">
 <kw name="Click Element" owner="A">
-<msg time="2024-12-06T12:23:56.736424" level="INFO">Clicking element '//android.view.View[@content-desc="M1"]'.</msg>
-<msg time="2024-12-06T12:23:57.480805" level="INFO">xpath criteria: //android.view.View[@content-desc="M1"]</msg>
+<msg time="2024-12-16T14:18:04.915358" level="INFO">Clicking element '//android.view.View[@content-desc="M1"]'.</msg>
+<msg time="2024-12-16T14:18:05.258155" level="INFO">xpath criteria: //android.view.View[@content-desc="M1"]</msg>
 <arg>//android.view.View[@content-desc="${machinename}"]</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-06T12:23:56.736424" elapsed="0.744381"/>
+<status status="PASS" start="2024-12-16T14:18:04.908311" elapsed="0.349844"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-06T12:23:58.480981" level="INFO">Slept 1 second.</msg>
+<msg time="2024-12-16T14:18:06.258780" level="INFO">Slept 1 second.</msg>
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-06T12:23:57.480805" elapsed="1.000176"/>
+<status status="PASS" start="2024-12-16T14:18:05.258155" elapsed="1.000625"/>
 </kw>
 <arg>${machienname}[1]</arg>
-<status status="PASS" start="2024-12-06T12:23:56.736424" elapsed="1.744557"/>
+<status status="PASS" start="2024-12-16T14:18:04.908311" elapsed="1.350469"/>
 </kw>
 <kw name="Click Element" owner="A">
-<msg time="2024-12-06T12:23:58.486083" level="INFO">Clicking element '//android.view.View[@content-desc="Continue"]'.</msg>
-<msg time="2024-12-06T12:23:59.181124" level="INFO">xpath criteria: //android.view.View[@content-desc="Continue"]</msg>
+<msg time="2024-12-16T14:18:06.258780" level="INFO">Clicking element '//android.view.View[@content-desc="Continue"]'.</msg>
+<msg time="2024-12-16T14:18:06.473208" level="INFO">xpath criteria: //android.view.View[@content-desc="Continue"]</msg>
 <arg>${continuebutton}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-06T12:23:58.480981" elapsed="0.700143"/>
+<status status="PASS" start="2024-12-16T14:18:06.258780" elapsed="0.214428"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-06T12:24:00.183589" level="INFO">Slept 1 second.</msg>
+<msg time="2024-12-16T14:18:07.473433" level="INFO">Slept 1 second.</msg>
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-06T12:23:59.183128" elapsed="1.000461"/>
+<status status="PASS" start="2024-12-16T14:18:06.473208" elapsed="1.000225"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="A">
-<msg time="2024-12-06T12:24:00.428255" level="INFO">xpath criteria: //android.view.View[@content-desc="M1"]</msg>
+<msg time="2024-12-16T14:18:07.648355" level="INFO">xpath criteria: //android.view.View[@content-desc="M1"]</msg>
 <arg>//android.view.View[@content-desc="${machienname}[1]"]</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-12-06T12:24:00.183589" elapsed="0.244666"/>
+<status status="PASS" start="2024-12-16T14:18:07.473433" elapsed="0.174922"/>
 </kw>
 <kw name="Click Element" owner="A">
-<msg time="2024-12-06T12:24:00.434326" level="INFO">Clicking element '//android.view.View[@content-desc="Select a label"]'.</msg>
-<msg time="2024-12-06T12:24:01.446856" level="INFO">xpath criteria: //android.view.View[@content-desc="Select a label"]</msg>
+<msg time="2024-12-16T14:18:07.659301" level="INFO">Clicking element '//android.view.View[@content-desc="Select a label"]'.</msg>
+<msg time="2024-12-16T14:18:08.029829" level="INFO">xpath criteria: //android.view.View[@content-desc="Select a label"]</msg>
 <arg>${labeldropdown}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-06T12:24:00.428255" elapsed="1.018601"/>
+<status status="PASS" start="2024-12-16T14:18:07.648355" elapsed="0.381474"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-06T12:24:02.447523" level="INFO">Slept 1 second.</msg>
+<msg time="2024-12-16T14:18:09.030039" level="INFO">Slept 1 second.</msg>
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-06T12:24:01.446856" elapsed="1.000667"/>
+<status status="PASS" start="2024-12-16T14:18:08.029829" elapsed="1.000210"/>
 </kw>
 <kw name="Select Machine" owner="keyword">
 <kw name="Click Element" owner="A">
-<msg time="2024-12-06T12:24:02.447523" level="INFO">Clicking element '//android.view.View[@content-desc="IssueShutoff"]'.</msg>
-<msg time="2024-12-06T12:24:03.513550" level="INFO">xpath criteria: //android.view.View[@content-desc="IssueShutoff"]</msg>
+<msg time="2024-12-16T14:18:09.034484" level="INFO">Clicking element '//android.view.View[@content-desc="IssueShutoff"]'.</msg>
+<msg time="2024-12-16T14:18:09.233449" level="INFO">xpath criteria: //android.view.View[@content-desc="IssueShutoff"]</msg>
 <arg>//android.view.View[@content-desc="${machinename}"]</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-06T12:24:02.447523" elapsed="1.066027"/>
+<status status="PASS" start="2024-12-16T14:18:09.030039" elapsed="0.204046"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-06T12:24:04.514096" level="INFO">Slept 1 second.</msg>
+<msg time="2024-12-16T14:18:10.235509" level="INFO">Slept 1 second.</msg>
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-06T12:24:03.513550" elapsed="1.000546"/>
+<status status="PASS" start="2024-12-16T14:18:09.234085" elapsed="1.001424"/>
 </kw>
 <arg>${machienname}[2]</arg>
-<status status="PASS" start="2024-12-06T12:24:02.447523" elapsed="2.066573"/>
+<status status="PASS" start="2024-12-16T14:18:09.030039" elapsed="1.205470"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-06T12:24:06.514386" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-12-16T14:18:12.235803" level="INFO">Slept 2 seconds.</msg>
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-06T12:24:04.514096" elapsed="2.000290"/>
+<status status="PASS" start="2024-12-16T14:18:10.235509" elapsed="2.000294"/>
 </kw>
 <kw name="Click Element" owner="A">
-<msg time="2024-12-06T12:24:06.516389" level="INFO">Clicking element '//android.view.View[@content-desc="Select date and time"]'.</msg>
-<msg time="2024-12-06T12:24:07.213468" level="INFO">xpath criteria: //android.view.View[@content-desc="Select date and time"]</msg>
+<msg time="2024-12-16T14:18:12.239598" level="INFO">Clicking element '//android.view.View[@content-desc="Select date and time"]'.</msg>
+<msg time="2024-12-16T14:18:12.431036" level="INFO">xpath criteria: //android.view.View[@content-desc="Select date and time"]</msg>
 <arg>${calender}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-06T12:24:06.514386" elapsed="0.699082"/>
+<status status="PASS" start="2024-12-16T14:18:12.235803" elapsed="0.195233"/>
 </kw>
 <kw name="Get Current And Target Time" owner="customekeyword-fetchdateandtime">
-<msg time="2024-12-06T12:24:07.213468" level="INFO">Current Date: Dec 06</msg>
-<status status="PASS" start="2024-12-06T12:24:07.213468" elapsed="0.000000"/>
+<msg time="2024-12-16T14:18:12.438710" level="INFO">Current Date: Dec 16</msg>
+<status status="PASS" start="2024-12-16T14:18:12.438553" elapsed="0.000157"/>
 </kw>
 <kw name="Get Current And Target Time" owner="customekeyword-fetchdateandtime">
-<msg time="2024-12-06T12:24:07.221473" level="INFO">Current Date: Dec 06</msg>
-<msg time="2024-12-06T12:24:07.221473" level="INFO">${current_date} = Dec 06</msg>
-<msg time="2024-12-06T12:24:07.221473" level="INFO">${current_time} = 12:24</msg>
-<msg time="2024-12-06T12:24:07.221473" level="INFO">${target_time} = 12:30</msg>
+<msg time="2024-12-16T14:18:12.438710" level="INFO">Current Date: Dec 16</msg>
+<msg time="2024-12-16T14:18:12.440997" level="INFO">${current_date} = Dec 16</msg>
+<msg time="2024-12-16T14:18:12.440997" level="INFO">${current_time} = 14:18</msg>
+<msg time="2024-12-16T14:18:12.440997" level="INFO">${target_time} = 14:24</msg>
 <var>${current_date}</var>
 <var>${current_time}</var>
 <var>${target_time}</var>
-<status status="PASS" start="2024-12-06T12:24:07.221473" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:12.438710" elapsed="0.002287"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-12-06T12:24:07.221473" level="INFO">Current Date: Dec 06</msg>
+<msg time="2024-12-16T14:18:12.440997" level="INFO">Current Date: Dec 16</msg>
 <arg>Current Date: ${current_date}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-12-06T12:24:07.221473" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:12.440997" elapsed="0.000000"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-12-06T12:24:07.221473" level="INFO">Current Time: 12:24</msg>
+<msg time="2024-12-16T14:18:12.440997" level="INFO">Current Time: 14:18</msg>
 <arg>Current Time: ${current_time}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-12-06T12:24:07.221473" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:12.440997" elapsed="0.000000"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-12-06T12:24:07.221473" level="INFO">Current Time: 12:30</msg>
+<msg time="2024-12-16T14:18:12.440997" level="INFO">Current Time: 14:24</msg>
 <arg>Current Time: ${target_time}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-12-06T12:24:07.221473" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:12.440997" elapsed="0.000000"/>
 </kw>
 <kw name="Click button" owner="keyword">
 <kw name="Click Element" owner="A">
-<msg time="2024-12-06T12:24:07.229969" level="INFO">Clicking element '//android.widget.Button[@content-desc="Next"]'.</msg>
-<msg time="2024-12-06T12:24:07.493571" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Next"]</msg>
+<msg time="2024-12-16T14:18:12.448638" level="INFO">Clicking element '//android.widget.Button[@content-desc="Next"]'.</msg>
+<msg time="2024-12-16T14:18:14.268298" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Next"]</msg>
 <arg>//android.widget.Button[@content-desc="${buttonname}"]</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-06T12:24:07.221473" elapsed="0.272098"/>
+<status status="PASS" start="2024-12-16T14:18:12.440997" elapsed="1.827301"/>
 </kw>
 <arg>Next</arg>
-<status status="PASS" start="2024-12-06T12:24:07.221473" elapsed="0.272098"/>
+<status status="PASS" start="2024-12-16T14:18:12.440997" elapsed="1.827301"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="A">
 <arg>accessibility_id=End_Hour_picker\n:\nEnd_Minute_picker</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-12-06T12:24:07.495078" elapsed="0.859631"/>
+<status status="PASS" start="2024-12-16T14:18:14.268298" elapsed="0.109841"/>
 </kw>
 <kw name="Get Webelement" owner="A">
-<msg time="2024-12-06T12:24:08.467374" level="INFO">${element} = &lt;appium.webdriver.webelement.WebElement (session="cf7ab719-0a5f-445d-bb88-2a22e6fc3a1c", element="00000000-0000-030e-0000-00e700000003")&gt;</msg>
+<msg time="2024-12-16T14:18:14.478377" level="INFO">${element} = &lt;appium.webdriver.webelement.WebElement (session="f050fc4f-4177-40c0-929b-8654060e74df", element="00000000-0000-01e4-0000-00f300000003")&gt;</msg>
 <var>${element}</var>
 <arg>accessibility_id=End_Hour_picker\n:\nEnd_Minute_picker</arg>
 <doc>Returns the first [http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.remote.webelement|WebElement] object matching ``locator``.</doc>
-<status status="PASS" start="2024-12-06T12:24:08.355606" elapsed="0.111768"/>
+<status status="PASS" start="2024-12-16T14:18:14.378139" elapsed="0.100238"/>
 </kw>
 <kw name="Scroll Vertically" owner="keyword">
 <kw name="Get Element Attribute" owner="AppiumLibrary">
-<msg time="2024-12-06T12:24:08.533218" level="INFO">Element '&lt;appium.webdriver.webelement.WebElement (session="cf7ab719-0a5f-445d-bb88-2a22e6fc3a1c", element="00000000-0000-030e-0000-00e700000003")&gt;' attribute 'bounds' value '[110,493][970,2011]' </msg>
-<msg time="2024-12-06T12:24:08.533218" level="INFO">${bounds_str} = [110,493][970,2011]</msg>
+<msg time="2024-12-16T14:18:14.518022" level="INFO">Element '&lt;appium.webdriver.webelement.WebElement (session="f050fc4f-4177-40c0-929b-8654060e74df", element="00000000-0000-01e4-0000-00f300000003")&gt;' attribute 'bounds' value '[75,305][645,1340]' </msg>
+<msg time="2024-12-16T14:18:14.518022" level="INFO">${bounds_str} = [75,305][645,1340]</msg>
 <var>${bounds_str}</var>
 <arg>${element}</arg>
 <arg>bounds</arg>
 <doc>Get element attribute using given attribute: name, value,...</doc>
-<status status="PASS" start="2024-12-06T12:24:08.475688" elapsed="0.057530"/>
+<status status="PASS" start="2024-12-16T14:18:14.478377" elapsed="0.039645"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-12-06T12:24:08.533218" level="INFO">${bounds} = [[110, 493], [970, 2011]]</msg>
+<msg time="2024-12-16T14:18:14.528382" level="INFO">${bounds} = [[75, 305], [645, 1340]]</msg>
 <var>${bounds}</var>
 <arg>[list(map(int, coord.split(','))) for coord in "${bounds_str}"[1:-1].split('][')]</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-12-06T12:24:08.533218" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:14.518022" elapsed="0.010360"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-12-06T12:24:08.541223" level="INFO">${x_start} = 540.0</msg>
+<msg time="2024-12-16T14:18:14.529429" level="INFO">${x_start} = 360.0</msg>
 <var>${x_start}</var>
 <arg>(${bounds}[0][0] + ${bounds}[1][0]) / 2</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-12-06T12:24:08.533218" elapsed="0.008005"/>
+<status status="PASS" start="2024-12-16T14:18:14.529429" elapsed="0.000000"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-12-06T12:24:08.541223" level="INFO">${y_start} = 1859.2</msg>
+<msg time="2024-12-16T14:18:14.532011" level="INFO">${y_start} = 1236.5</msg>
 <var>${y_start}</var>
 <arg>${bounds}[0][1] + (${start} * (${bounds}[1][1] - ${bounds}[0][1]))</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-12-06T12:24:08.541223" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:14.530955" elapsed="0.001056"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-12-06T12:24:08.543505" level="INFO">${y_end} = 644.8</msg>
+<msg time="2024-12-16T14:18:14.532011" level="INFO">${y_end} = 408.5</msg>
 <var>${y_end}</var>
 <arg>${bounds}[0][1] + (${end} * (${bounds}[1][1] - ${bounds}[0][1]))</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-12-06T12:24:08.542907" elapsed="0.000598"/>
+<status status="PASS" start="2024-12-16T14:18:14.532011" elapsed="0.000000"/>
 </kw>
 <kw name="Swipe" owner="AppiumLibrary">
 <arg>${x_start}</arg>
@@ -327,18 +342,18 @@ View More"]</msg>
 <arg>${y_end}</arg>
 <arg>2000</arg>
 <doc>Swipe from one point to another point, for an optional duration.</doc>
-<status status="PASS" start="2024-12-06T12:24:08.543505" elapsed="2.349637"/>
+<status status="PASS" start="2024-12-16T14:18:14.532011" elapsed="2.356611"/>
 </kw>
 <arg>${element}</arg>
 <arg>start=0.9</arg>
 <arg>end=0.1</arg>
-<status status="PASS" start="2024-12-06T12:24:08.467374" elapsed="2.425982"/>
+<status status="PASS" start="2024-12-16T14:18:14.478377" elapsed="2.410245"/>
 </kw>
 <kw name="Scroll Hour And Minute Picker" owner="keyword">
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Scrolling from (${start_x}, ${start_y}) to (${end_x}, ${end_y})</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-12-06T12:24:10.896012" elapsed="0.001163"/>
+<status status="PASS" start="2024-12-16T14:18:16.888622" elapsed="0.000000"/>
 </kw>
 <kw name="Swipe" owner="AppiumLibrary">
 <arg>${start_x}</arg>
@@ -347,535 +362,507 @@ View More"]</msg>
 <arg>${end_y}</arg>
 <arg>2000</arg>
 <doc>Swipe from one point to another point, for an optional duration.</doc>
-<status status="PASS" start="2024-12-06T12:24:10.897175" elapsed="2.355125"/>
+<status status="PASS" start="2024-12-16T14:18:16.888622" elapsed="2.359657"/>
 </kw>
-<arg>628</arg>
-<arg>1687</arg>
-<arg>645</arg>
-<arg>1295</arg>
-<status status="PASS" start="2024-12-06T12:24:10.894167" elapsed="2.366452"/>
+<arg>413</arg>
+<arg>1125</arg>
+<arg>411</arg>
+<arg>914</arg>
+<status status="PASS" start="2024-12-16T14:18:16.888622" elapsed="2.359657"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-06T12:24:17.261035" level="INFO">Slept 4 seconds.</msg>
-<arg>4</arg>
+<msg time="2024-12-16T14:18:22.248757" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-06T12:24:13.260619" elapsed="4.000416"/>
+<status status="PASS" start="2024-12-16T14:18:19.248279" elapsed="3.000478"/>
 </kw>
 <kw name="Click button" owner="keyword">
 <kw name="Click Element" owner="A">
-<msg time="2024-12-06T12:24:17.290132" level="INFO">Clicking element '//android.widget.Button[@content-desc="Done"]'.</msg>
-<msg time="2024-12-06T12:24:18.368105" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Done"]</msg>
+<msg time="2024-12-16T14:18:22.254070" level="INFO">Clicking element '//android.widget.Button[@content-desc="Done"]'.</msg>
+<msg time="2024-12-16T14:18:23.168940" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Done"]</msg>
 <arg>//android.widget.Button[@content-desc="${buttonname}"]</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-06T12:24:17.261035" elapsed="1.113952"/>
+<status status="PASS" start="2024-12-16T14:18:22.248757" elapsed="0.920183"/>
 </kw>
 <arg>Done</arg>
-<status status="PASS" start="2024-12-06T12:24:17.261035" elapsed="1.114222"/>
+<status status="PASS" start="2024-12-16T14:18:22.248757" elapsed="0.920183"/>
 </kw>
 <kw name="Click Element" owner="A">
-<msg time="2024-12-06T12:24:18.376770" level="INFO">Clicking element '//android.view.View[@content-desc="Create Downtime"][2]'.</msg>
-<msg time="2024-12-06T12:24:19.425912" level="INFO">xpath criteria: //android.view.View[@content-desc="Create Downtime"][2]</msg>
+<msg time="2024-12-16T14:18:23.173677" level="INFO">Clicking element '//android.view.View[@content-desc="Create Downtime"][2]'.</msg>
+<msg time="2024-12-16T14:18:23.360089" level="INFO">xpath criteria: //android.view.View[@content-desc="Create Downtime"][2]</msg>
 <arg>${downime}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-06T12:24:18.376037" elapsed="1.049875"/>
+<status status="PASS" start="2024-12-16T14:18:23.168940" elapsed="0.191149"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="A">
-<msg time="2024-12-06T12:24:19.541476" level="INFO">xpath criteria: //android.widget.ImageView[contains(@content-desc, "Downtime Created Successfully")]</msg>
+<msg time="2024-12-16T14:18:24.447881" level="INFO">xpath criteria: //android.widget.ImageView[contains(@content-desc, "Downtime Created Successfully")]</msg>
 <arg>//android.widget.ImageView[contains(@content-desc, "Downtime Created Successfully")]</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-12-06T12:24:19.425912" elapsed="0.115564"/>
+<status status="PASS" start="2024-12-16T14:18:23.361011" elapsed="1.086870"/>
 </kw>
 <kw name="Click Element" owner="A">
-<msg time="2024-12-06T12:24:19.544337" level="INFO">Clicking element '//android.view.View[@content-desc="View Entries"]'.</msg>
-<msg time="2024-12-06T12:24:20.766419" level="INFO">xpath criteria: //android.view.View[@content-desc="View Entries"]</msg>
+<msg time="2024-12-16T14:18:24.454619" level="INFO">Clicking element '//android.view.View[@content-desc="View Entries"]'.</msg>
+<msg time="2024-12-16T14:18:24.683338" level="INFO">xpath criteria: //android.view.View[@content-desc="View Entries"]</msg>
 <arg>${view entries}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-06T12:24:19.544337" elapsed="1.222082"/>
+<status status="PASS" start="2024-12-16T14:18:24.447881" elapsed="0.235457"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="A">
-<msg time="2024-12-06T12:24:20.876441" level="INFO">xpath criteria: //android.view.View[contains(@content-desc, "IssueShutoff")]</msg>
+<msg time="2024-12-16T14:18:26.118519" level="INFO">xpath criteria: //android.view.View[contains(@content-desc, "IssueShutoff")]
+xpath criteria: //android.view.View[contains(@content-desc, "IssueShutoff")]</msg>
 <arg>//android.view.View[contains(@content-desc, "IssueShutoff")]</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-12-06T12:24:20.766419" elapsed="0.110525"/>
+<status status="PASS" start="2024-12-16T14:18:24.683338" elapsed="1.435181"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-06T12:24:21.877406" level="INFO">Slept 1 second.</msg>
+<msg time="2024-12-16T14:18:27.118679" level="INFO">Slept 1 second.</msg>
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-06T12:24:20.876944" elapsed="1.000462"/>
+<status status="PASS" start="2024-12-16T14:18:26.118519" elapsed="1.000160"/>
+</kw>
+<kw name="Close Application" owner="A">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-12-16T14:18:27.118679" elapsed="0.649752"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-06T12:24:23.880663" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
+<msg time="2024-12-16T14:18:28.768567" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-06T12:24:21.880411" elapsed="2.000252"/>
+<status status="PASS" start="2024-12-16T14:18:27.768431" elapsed="1.000136"/>
 </kw>
 <kw name="login devsite on website" owner="keyword">
 <kw name="Open Browser" owner="S">
-<msg time="2024-12-06T12:24:23.882672" level="INFO">Opening browser 'chrome' to base url 'https://dev.manuf.app/'.</msg>
+<msg time="2024-12-16T14:18:28.770609" level="INFO">Opening browser 'chrome' to base url 'https://dev.manuf.app/'.</msg>
 <arg>${urlaws}</arg>
 <arg>chrome</arg>
-<arg>options=add_argument("--headless")</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-06T12:24:23.882672" elapsed="1.337483"/>
+<status status="PASS" start="2024-12-16T14:18:28.770609" elapsed="1.387425"/>
 </kw>
 <kw name="Maximize Browser Window" owner="S">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-12-06T12:24:25.220155" elapsed="0.028537"/>
+<status status="PASS" start="2024-12-16T14:18:30.158034" elapsed="0.045714"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-06T12:24:26.249107" level="INFO">Slept 1 second.</msg>
+<msg time="2024-12-16T14:18:31.204013" level="INFO">Slept 1 second.</msg>
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-06T12:24:25.248692" elapsed="1.000415"/>
+<status status="PASS" start="2024-12-16T14:18:30.203748" elapsed="1.000265"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="S">
 <arg>${emailweb}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-06T12:24:26.249107" elapsed="0.024452"/>
+<status status="PASS" start="2024-12-16T14:18:31.204013" elapsed="0.030976"/>
 </kw>
 <kw name="Input Text" owner="S">
-<msg time="2024-12-06T12:24:26.273559" level="INFO">Typing text 'pooja_dev@testing.com' into text field '//input[@id="mobileEmail"]'.</msg>
+<msg time="2024-12-16T14:18:31.234989" level="INFO">Typing text 'pooja_dev@testing.com' into text field '//input[@id="mobileEmail"]'.</msg>
 <arg>${emailweb}</arg>
 <arg>pooja_dev@testing.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-06T12:24:26.273559" elapsed="0.192086"/>
+<status status="PASS" start="2024-12-16T14:18:31.234989" elapsed="0.143014"/>
 </kw>
 <kw name="Input Text" owner="S">
-<msg time="2024-12-06T12:24:26.465645" level="INFO">Typing text '4652049559' into text field '//input[@name = "password"]'.</msg>
+<msg time="2024-12-16T14:18:31.378003" level="INFO">Typing text '4652049559' into text field '//input[@name = "password"]'.</msg>
 <arg>${passwordweb}</arg>
 <arg>4652049559</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-06T12:24:26.465645" elapsed="0.089179"/>
+<status status="PASS" start="2024-12-16T14:18:31.378003" elapsed="0.080986"/>
 </kw>
 <kw name="Click Element" owner="S">
-<msg time="2024-12-06T12:24:26.554824" level="INFO">Clicking element '//div[text() = "Sign In"]'.</msg>
+<msg time="2024-12-16T14:18:31.458989" level="INFO">Clicking element '//div[text() = "Sign In"]'.</msg>
 <arg>${signInweb}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-06T12:24:26.554824" elapsed="0.138729"/>
+<status status="PASS" start="2024-12-16T14:18:31.458989" elapsed="0.065604"/>
 </kw>
-<status status="PASS" start="2024-12-06T12:24:23.880663" elapsed="2.812890"/>
+<status status="PASS" start="2024-12-16T14:18:28.768567" elapsed="2.756026"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-06T12:24:27.693780" level="INFO">Slept 1 second.</msg>
+<msg time="2024-12-16T14:18:32.524869" level="INFO">Slept 1 second.</msg>
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-06T12:24:26.693553" elapsed="1.000227"/>
+<status status="PASS" start="2024-12-16T14:18:31.524593" elapsed="1.000276"/>
 </kw>
 <kw name="Planning and scheduling" owner="keyword">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-06T12:24:28.694651" level="INFO">Slept 1 second.</msg>
+<msg time="2024-12-16T14:18:33.524980" level="INFO">Slept 1 second.</msg>
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-06T12:24:27.693780" elapsed="1.000871"/>
+<status status="PASS" start="2024-12-16T14:18:32.524869" elapsed="1.000111"/>
 </kw>
 <kw name="Click Element" owner="S">
-<msg time="2024-12-06T12:24:28.694651" level="INFO">Clicking element '//span[text()="Planning &amp; Scheduling"]'.</msg>
+<msg time="2024-12-16T14:18:33.524980" level="INFO">Clicking element '//span[text()="Planning &amp; Scheduling"]'.</msg>
 <arg>//span[text()="Planning &amp; Scheduling"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-06T12:24:28.694651" elapsed="0.077659"/>
+<status status="PASS" start="2024-12-16T14:18:33.524980" elapsed="0.085609"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-06T12:24:29.772505" level="INFO">Slept 1 second.</msg>
+<msg time="2024-12-16T14:18:34.611852" level="INFO">Slept 1 second.</msg>
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-06T12:24:28.772310" elapsed="1.000618"/>
+<status status="PASS" start="2024-12-16T14:18:33.611500" elapsed="1.000352"/>
 </kw>
 <kw name="Click Element" owner="S">
-<msg time="2024-12-06T12:24:29.774246" level="INFO">Clicking element '//a[@id="scheduling"]'.</msg>
+<msg time="2024-12-16T14:18:34.611852" level="INFO">Clicking element '//a[@id="scheduling"]'.</msg>
 <arg>//a[@id="scheduling"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-06T12:24:29.773734" elapsed="0.064147"/>
+<status status="PASS" start="2024-12-16T14:18:34.611852" elapsed="0.070394"/>
 </kw>
 <kw name="Reload Page" owner="S">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" start="2024-12-06T12:24:29.837881" elapsed="0.168364"/>
+<status status="PASS" start="2024-12-16T14:18:34.685603" elapsed="0.182502"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-06T12:24:32.007733" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-12-16T14:18:36.873473" level="INFO">Slept 2 seconds.</msg>
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-06T12:24:30.007143" elapsed="2.000590"/>
+<status status="PASS" start="2024-12-16T14:18:34.868105" elapsed="2.005368"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="S">
 <arg>Scheduling</arg>
 <arg>timeout=60s</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-12-06T12:24:32.007733" elapsed="0.023465"/>
+<status status="PASS" start="2024-12-16T14:18:36.873473" elapsed="0.018217"/>
 </kw>
 <kw name="Click Element" owner="S">
-<msg time="2024-12-06T12:24:32.037808" level="INFO">Clicking element '//h5[text()="Scheduling"]'.</msg>
+<msg time="2024-12-16T14:18:36.893591" level="INFO">Clicking element '//h5[text()="Scheduling"]'.</msg>
 <arg>//h5[text()="Scheduling"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-06T12:24:32.031198" elapsed="0.108972"/>
+<status status="PASS" start="2024-12-16T14:18:36.891690" elapsed="0.124779"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-06T12:24:33.140923" level="INFO">Slept 1 second.</msg>
+<msg time="2024-12-16T14:18:38.016993" level="INFO">Slept 1 second.</msg>
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-06T12:24:32.140170" elapsed="1.000753"/>
+<status status="PASS" start="2024-12-16T14:18:37.016469" elapsed="1.000524"/>
 </kw>
-<status status="PASS" start="2024-12-06T12:24:27.693780" elapsed="5.447143"/>
+<status status="PASS" start="2024-12-16T14:18:32.524869" elapsed="5.492124"/>
 </kw>
 <kw name="Reload Page" owner="S">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" start="2024-12-06T12:24:33.140923" elapsed="0.238667"/>
+<status status="PASS" start="2024-12-16T14:18:38.016993" elapsed="0.121300"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-06T12:24:35.384934" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-12-16T14:18:40.138577" level="INFO">Slept 2 seconds.</msg>
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-06T12:24:33.384619" elapsed="2.000315"/>
+<status status="PASS" start="2024-12-16T14:18:38.138293" elapsed="2.000284"/>
 </kw>
 <kw name="Get All Workorders IDs" owner="keyword">
 <kw name="Get WebElements" owner="S">
-<msg time="2024-12-06T12:24:35.406372" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="5a71d14bab013cdd115e8f20622967db", element="f.ED5C9E42CA2EC4BA49CFA6A5176740A7.d.D1349B0BDE5E30CEDC55ECFE388B2572.e.185")&gt;, &lt;selenium.webdri...</msg>
+<msg time="2024-12-16T14:18:40.158005" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d08335f8bf0432c238d137c8412870e5", element="f.B931FB2C4EBA62F729D7167B106FEBC1.d.3C145BF0A9203DA0FF4B9E18B78D64A6.e.189")&gt;, &lt;selenium.webdri...</msg>
 <var>${elements}</var>
 <arg>xpath=//div[@data-task-id]</arg>
 <doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-12-06T12:24:35.386766" elapsed="0.019606"/>
+<status status="PASS" start="2024-12-16T14:18:40.138577" elapsed="0.019428"/>
 </kw>
 <kw name="Create List" owner="BuiltIn">
-<msg time="2024-12-06T12:24:35.413878" level="INFO">${task_ids} = []</msg>
+<msg time="2024-12-16T14:18:40.158005" level="INFO">${task_ids} = []</msg>
 <var>${task_ids}</var>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2024-12-06T12:24:35.413878" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:40.158005" elapsed="0.000000"/>
 </kw>
 <for flavor="IN">
 <iter>
 <kw name="Get Element Attribute" owner="S">
-<msg time="2024-12-06T12:24:35.441571" level="INFO">${task_id} = 0</msg>
+<msg time="2024-12-16T14:18:40.177869" level="INFO">${task_id} = 0</msg>
 <var>${task_id}</var>
 <arg>${element}</arg>
 <arg>data-task-id</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-12-06T12:24:35.413878" elapsed="0.027693"/>
+<status status="PASS" start="2024-12-16T14:18:40.158005" elapsed="0.019864"/>
 </kw>
 <kw name="Append To List" owner="Collections">
 <arg>${task_ids}</arg>
 <arg>${task_id}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-12-06T12:24:35.442490" elapsed="0.000552"/>
+<status status="PASS" start="2024-12-16T14:18:40.177869" elapsed="0.002587"/>
 </kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="5a71d14bab013cdd115e8f20622967db", element="f.ED5C9E42CA2EC4BA49CFA6A5176740A7.d.D1349B0BDE5E30CEDC55ECFE388B2572.e.185")&gt;</var>
-<status status="PASS" start="2024-12-06T12:24:35.413878" elapsed="0.029164"/>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d08335f8bf0432c238d137c8412870e5", element="f.B931FB2C4EBA62F729D7167B106FEBC1.d.3C145BF0A9203DA0FF4B9E18B78D64A6.e.189")&gt;</var>
+<status status="PASS" start="2024-12-16T14:18:40.158005" elapsed="0.022451"/>
 </iter>
 <iter>
 <kw name="Get Element Attribute" owner="S">
-<msg time="2024-12-06T12:24:35.456561" level="INFO">${task_id} = 1</msg>
+<msg time="2024-12-16T14:18:40.198133" level="INFO">${task_id} = 1</msg>
 <var>${task_id}</var>
 <arg>${element}</arg>
 <arg>data-task-id</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-12-06T12:24:35.443863" elapsed="0.012698"/>
+<status status="PASS" start="2024-12-16T14:18:40.180456" elapsed="0.017677"/>
 </kw>
 <kw name="Append To List" owner="Collections">
 <arg>${task_ids}</arg>
 <arg>${task_id}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-12-06T12:24:35.456561" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:40.198133" elapsed="0.000000"/>
 </kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="5a71d14bab013cdd115e8f20622967db", element="f.ED5C9E42CA2EC4BA49CFA6A5176740A7.d.D1349B0BDE5E30CEDC55ECFE388B2572.e.186")&gt;</var>
-<status status="PASS" start="2024-12-06T12:24:35.443042" elapsed="0.013519"/>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d08335f8bf0432c238d137c8412870e5", element="f.B931FB2C4EBA62F729D7167B106FEBC1.d.3C145BF0A9203DA0FF4B9E18B78D64A6.e.190")&gt;</var>
+<status status="PASS" start="2024-12-16T14:18:40.180456" elapsed="0.017677"/>
 </iter>
 <iter>
 <kw name="Get Element Attribute" owner="S">
-<msg time="2024-12-06T12:24:35.476434" level="INFO">${task_id} = 2</msg>
+<msg time="2024-12-16T14:18:40.217944" level="INFO">${task_id} = 2</msg>
 <var>${task_id}</var>
 <arg>${element}</arg>
 <arg>data-task-id</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-12-06T12:24:35.456561" elapsed="0.019873"/>
+<status status="PASS" start="2024-12-16T14:18:40.198133" elapsed="0.019811"/>
 </kw>
 <kw name="Append To List" owner="Collections">
 <arg>${task_ids}</arg>
 <arg>${task_id}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-12-06T12:24:35.476434" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:40.217944" elapsed="0.000000"/>
 </kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="5a71d14bab013cdd115e8f20622967db", element="f.ED5C9E42CA2EC4BA49CFA6A5176740A7.d.D1349B0BDE5E30CEDC55ECFE388B2572.e.187")&gt;</var>
-<status status="PASS" start="2024-12-06T12:24:35.456561" elapsed="0.019873"/>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d08335f8bf0432c238d137c8412870e5", element="f.B931FB2C4EBA62F729D7167B106FEBC1.d.3C145BF0A9203DA0FF4B9E18B78D64A6.e.191")&gt;</var>
+<status status="PASS" start="2024-12-16T14:18:40.198133" elapsed="0.019811"/>
 </iter>
 <var>${element}</var>
 <value>@{elements}</value>
-<status status="PASS" start="2024-12-06T12:24:35.413878" elapsed="0.062556"/>
+<status status="PASS" start="2024-12-16T14:18:40.158005" elapsed="0.059939"/>
 </for>
 <kw name="Run Keyword If" owner="BuiltIn">
 <arg>len(${task_ids}) == 0</arg>
 <arg>Log</arg>
 <arg>No work orders found. Workorder might be deleted.</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-12-06T12:24:35.476434" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:40.217944" elapsed="0.000000"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
 <arg>len(${task_ids}) == 0</arg>
 <arg>Return From Keyword</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-12-06T12:24:35.476434" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:40.217944" elapsed="0.000000"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-12-06T12:24:35.480439" level="INFO">${latest_task_id} = 2</msg>
+<msg time="2024-12-16T14:18:40.217944" level="INFO">${latest_task_id} = 2</msg>
 <var>${latest_task_id}</var>
 <arg>${task_ids[-1]}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-12-06T12:24:35.476434" elapsed="0.004005"/>
+<status status="PASS" start="2024-12-16T14:18:40.217944" elapsed="0.000000"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-12-06T12:24:35.480439" level="INFO">The latest data-task-id is: 2</msg>
+<msg time="2024-12-16T14:18:40.217944" level="INFO">The latest data-task-id is: 2</msg>
 <arg>The latest data-task-id is: ${latest_task_id}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-12-06T12:24:35.480439" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:40.217944" elapsed="0.000000"/>
 </kw>
 <return>
 <value>${latest_task_id}</value>
-<status status="PASS" start="2024-12-06T12:24:35.480439" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:40.217944" elapsed="0.000000"/>
 </return>
-<msg time="2024-12-06T12:24:35.480439" level="INFO">${newly_downtime_id} = 2</msg>
+<msg time="2024-12-16T14:18:40.217944" level="INFO">${newly_downtime_id} = 2</msg>
 <var>${newly_downtime_id}</var>
 <doc>Fetch all workorder IDs and return the latest one.</doc>
-<status status="PASS" start="2024-12-06T12:24:35.385906" elapsed="0.094533"/>
+<status status="PASS" start="2024-12-16T14:18:40.138577" elapsed="0.079367"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-06T12:24:36.480683" level="INFO">Slept 1 second.</msg>
+<msg time="2024-12-16T14:18:41.218110" level="INFO">Slept 1 second.</msg>
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-06T12:24:35.480439" elapsed="1.000244"/>
+<status status="PASS" start="2024-12-16T14:18:40.217944" elapsed="1.000166"/>
 </kw>
 <kw name="Get Date With Ordinal" owner="customekeyword-fetchdateandtime">
-<msg time="2024-12-06T12:24:36.480683" level="INFO">${today} = 6th Dec 24</msg>
+<msg time="2024-12-16T14:18:41.218110" level="INFO">${today} = 16th Dec 24</msg>
 <var>${today}</var>
-<status status="PASS" start="2024-12-06T12:24:36.480683" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:41.218110" elapsed="0.000000"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-12-06T12:24:36.483202" level="INFO">Today's date: 6th Dec 24</msg>
+<msg time="2024-12-16T14:18:41.218110" level="INFO">Today's date: 16th Dec 24</msg>
 <arg>Today's date: ${today}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-12-06T12:24:36.483202" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:41.218110" elapsed="0.000000"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-12-06T12:24:36.483202" level="INFO">${xpath} = //div[@role="button" ]//div[text()="6th Dec 24"]</msg>
+<msg time="2024-12-16T14:18:41.218110" level="INFO">${xpath} = //div[@role="button" ]//div[text()="16th Dec 24"]</msg>
 <var>${xpath}</var>
 <arg>//div[@role="button" ]//div[text()="${today}"]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-12-06T12:24:36.483202" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:41.218110" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="S">
 <arg>${xpath}</arg>
 <arg>timeout=10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-06T12:24:36.483202" elapsed="0.052247"/>
+<status status="PASS" start="2024-12-16T14:18:41.218110" elapsed="0.029934"/>
 </kw>
 <kw name="Click Element" owner="S">
-<msg time="2024-12-06T12:24:36.535449" level="INFO">Clicking element '//div[@role="button" ]//div[text()="6th Dec 24"]'.</msg>
+<msg time="2024-12-16T14:18:41.248044" level="INFO">Clicking element '//div[@role="button" ]//div[text()="16th Dec 24"]'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-06T12:24:36.535449" elapsed="0.237057"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-06T12:24:37.772955" level="INFO">Slept 1 second.</msg>
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-06T12:24:36.772506" elapsed="1.000449"/>
+<status status="PASS" start="2024-12-16T14:18:41.248044" elapsed="0.161462"/>
 </kw>
 <kw name="Click Element" owner="S">
-<msg time="2024-12-06T12:24:37.772955" level="INFO">Clicking element '//div[@data-task-id="2"]'.</msg>
+<msg time="2024-12-16T14:18:41.409506" level="INFO">Clicking element '//div[@data-task-id="2"]'.</msg>
 <arg>//div[@data-task-id="${newly_downtime_id}"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-06T12:24:37.772955" elapsed="0.141942"/>
+<status status="PASS" start="2024-12-16T14:18:41.409506" elapsed="0.108903"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-06T12:24:39.915307" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-12-16T14:18:43.519107" level="INFO">Slept 2 seconds.</msg>
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-06T12:24:37.914897" elapsed="2.000410"/>
+<status status="PASS" start="2024-12-16T14:18:41.518409" elapsed="2.000698"/>
 </kw>
 <kw name="Get All Times" owner="keyword">
 <kw name="Get WebElements" owner="S">
-<msg time="2024-12-06T12:24:39.937870" level="INFO">${start_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="5a71d14bab013cdd115e8f20622967db", element="f.ED5C9E42CA2EC4BA49CFA6A5176740A7.d.D1349B0BDE5E30CEDC55ECFE388B2572.e.200")&gt;]</msg>
+<msg time="2024-12-16T14:18:43.538139" level="INFO">${start_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d08335f8bf0432c238d137c8412870e5", element="f.B931FB2C4EBA62F729D7167B106FEBC1.d.3C145BF0A9203DA0FF4B9E18B78D64A6.e.244")&gt;]</msg>
 <var>${start_elements}</var>
 <arg>${times}</arg>
 <doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-12-06T12:24:39.915307" elapsed="0.022563"/>
+<status status="PASS" start="2024-12-16T14:18:43.519107" elapsed="0.019032"/>
 </kw>
 <kw name="Create List" owner="BuiltIn">
-<msg time="2024-12-06T12:24:39.937870" level="INFO">${start_times} = []</msg>
+<msg time="2024-12-16T14:18:43.538139" level="INFO">${start_times} = []</msg>
 <var>${start_times}</var>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2024-12-06T12:24:39.937870" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:43.538139" elapsed="0.000000"/>
 </kw>
 <for flavor="IN">
 <iter>
 <kw name="Get Text" owner="S">
-<msg time="2024-12-06T12:24:39.970939" level="INFO">${text} = 06 Dec 2024 12:24</msg>
+<msg time="2024-12-16T14:18:43.551357" level="INFO">${text} = 16 Dec 2024 14:18</msg>
 <var>${text}</var>
 <arg>${element}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-06T12:24:39.939376" elapsed="0.031563"/>
+<status status="PASS" start="2024-12-16T14:18:43.538139" elapsed="0.020237"/>
 </kw>
 <kw name="Extract Time From Log" owner="keyword">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-12-06T12:24:39.979035" level="INFO">${time} = 12:24</msg>
+<msg time="2024-12-16T14:18:43.559167" level="INFO">${time} = 14:18</msg>
 <var>${time}</var>
 <arg>'${log_entry}'.split()[-1]</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-12-06T12:24:39.979035" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:43.559167" elapsed="0.000000"/>
 </kw>
 <return>
 <value>${time}</value>
-<status status="PASS" start="2024-12-06T12:24:39.979035" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:43.559167" elapsed="0.000000"/>
 </return>
-<msg time="2024-12-06T12:24:39.979035" level="INFO">${time} = 12:24</msg>
+<msg time="2024-12-16T14:18:43.559167" level="INFO">${time} = 14:18</msg>
 <var>${time}</var>
 <arg>${text}</arg>
-<status status="PASS" start="2024-12-06T12:24:39.970939" elapsed="0.008096"/>
+<status status="PASS" start="2024-12-16T14:18:43.558654" elapsed="0.000513"/>
 </kw>
 <kw name="Append To List" owner="Collections">
 <arg>${start_times}</arg>
 <arg>${time}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-12-06T12:24:39.979035" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:43.559167" elapsed="0.000000"/>
 </kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="5a71d14bab013cdd115e8f20622967db", element="f.ED5C9E42CA2EC4BA49CFA6A5176740A7.d.D1349B0BDE5E30CEDC55ECFE388B2572.e.200")&gt;</var>
-<status status="PASS" start="2024-12-06T12:24:39.939376" elapsed="0.039659"/>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d08335f8bf0432c238d137c8412870e5", element="f.B931FB2C4EBA62F729D7167B106FEBC1.d.3C145BF0A9203DA0FF4B9E18B78D64A6.e.244")&gt;</var>
+<status status="PASS" start="2024-12-16T14:18:43.538139" elapsed="0.021028"/>
 </iter>
 <var>${element}</var>
 <value>@{start_elements}</value>
-<status status="PASS" start="2024-12-06T12:24:39.937870" elapsed="0.041165"/>
+<status status="PASS" start="2024-12-16T14:18:43.538139" elapsed="0.021028"/>
 </for>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-12-06T12:24:39.979035" level="INFO">Only Times: ['12:24']</msg>
+<msg time="2024-12-16T14:18:43.559167" level="INFO">Only Times: ['14:18']</msg>
 <arg>Only Times: ${start_times}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-12-06T12:24:39.979035" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:43.559167" elapsed="0.000000"/>
 </kw>
 <return>
 <value>${start_times}</value>
-<status status="PASS" start="2024-12-06T12:24:39.979035" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:43.559167" elapsed="0.000000"/>
 </return>
-<msg time="2024-12-06T12:24:39.979035" level="INFO">${starttimeslog} = ['12:24']</msg>
+<msg time="2024-12-16T14:18:43.559167" level="INFO">${starttimeslog} = ['14:18']</msg>
 <var>${starttimeslog}</var>
 <arg>${starttime}</arg>
-<status status="PASS" start="2024-12-06T12:24:39.915307" elapsed="0.063728"/>
+<status status="PASS" start="2024-12-16T14:18:43.519107" elapsed="0.040060"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-12-06T12:24:39.979035" level="INFO">All times: ['12:24']</msg>
+<msg time="2024-12-16T14:18:43.559167" level="INFO">All times: ['14:18']</msg>
 <arg>All times: ${starttimeslog}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-12-06T12:24:39.979035" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:43.559167" elapsed="0.000000"/>
 </kw>
 <kw name="Get All Times" owner="keyword">
 <kw name="Get WebElements" owner="S">
-<msg time="2024-12-06T12:24:40.003399" level="INFO">${start_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="5a71d14bab013cdd115e8f20622967db", element="f.ED5C9E42CA2EC4BA49CFA6A5176740A7.d.D1349B0BDE5E30CEDC55ECFE388B2572.e.201")&gt;]</msg>
+<msg time="2024-12-16T14:18:43.578108" level="INFO">${start_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d08335f8bf0432c238d137c8412870e5", element="f.B931FB2C4EBA62F729D7167B106FEBC1.d.3C145BF0A9203DA0FF4B9E18B78D64A6.e.245")&gt;]</msg>
 <var>${start_elements}</var>
 <arg>${times}</arg>
 <doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-12-06T12:24:39.979035" elapsed="0.024364"/>
+<status status="PASS" start="2024-12-16T14:18:43.566521" elapsed="0.011587"/>
 </kw>
 <kw name="Create List" owner="BuiltIn">
-<msg time="2024-12-06T12:24:40.003399" level="INFO">${start_times} = []</msg>
+<msg time="2024-12-16T14:18:43.578108" level="INFO">${start_times} = []</msg>
 <var>${start_times}</var>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2024-12-06T12:24:40.003399" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:43.578108" elapsed="0.000000"/>
 </kw>
 <for flavor="IN">
 <iter>
 <kw name="Get Text" owner="S">
-<msg time="2024-12-06T12:24:40.019480" level="INFO">${text} = 06 Dec 2024 12:30</msg>
+<msg time="2024-12-16T14:18:43.588438" level="INFO">${text} = 16 Dec 2024 14:23</msg>
 <var>${text}</var>
 <arg>${element}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-06T12:24:40.003399" elapsed="0.016081"/>
+<status status="PASS" start="2024-12-16T14:18:43.582357" elapsed="0.006081"/>
 </kw>
 <kw name="Extract Time From Log" owner="keyword">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-12-06T12:24:40.019480" level="INFO">${time} = 12:30</msg>
+<msg time="2024-12-16T14:18:43.598451" level="INFO">${time} = 14:23</msg>
 <var>${time}</var>
 <arg>'${log_entry}'.split()[-1]</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-12-06T12:24:40.019480" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:43.598451" elapsed="0.000000"/>
 </kw>
 <return>
 <value>${time}</value>
-<status status="PASS" start="2024-12-06T12:24:40.019480" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:43.599565" elapsed="0.000000"/>
 </return>
-<msg time="2024-12-06T12:24:40.019480" level="INFO">${time} = 12:30</msg>
+<msg time="2024-12-16T14:18:43.599565" level="INFO">${time} = 14:23</msg>
 <var>${time}</var>
 <arg>${text}</arg>
-<status status="PASS" start="2024-12-06T12:24:40.019480" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:43.588438" elapsed="0.011127"/>
 </kw>
 <kw name="Append To List" owner="Collections">
 <arg>${start_times}</arg>
 <arg>${time}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-12-06T12:24:40.019480" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:43.599565" elapsed="0.000000"/>
 </kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="5a71d14bab013cdd115e8f20622967db", element="f.ED5C9E42CA2EC4BA49CFA6A5176740A7.d.D1349B0BDE5E30CEDC55ECFE388B2572.e.201")&gt;</var>
-<status status="PASS" start="2024-12-06T12:24:40.003399" elapsed="0.016081"/>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d08335f8bf0432c238d137c8412870e5", element="f.B931FB2C4EBA62F729D7167B106FEBC1.d.3C145BF0A9203DA0FF4B9E18B78D64A6.e.245")&gt;</var>
+<status status="PASS" start="2024-12-16T14:18:43.582357" elapsed="0.017208"/>
 </iter>
 <var>${element}</var>
 <value>@{start_elements}</value>
-<status status="PASS" start="2024-12-06T12:24:40.003399" elapsed="0.016081"/>
+<status status="PASS" start="2024-12-16T14:18:43.582357" elapsed="0.017208"/>
 </for>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-12-06T12:24:40.019480" level="INFO">Only Times: ['12:30']</msg>
+<msg time="2024-12-16T14:18:43.599565" level="INFO">Only Times: ['14:23']</msg>
 <arg>Only Times: ${start_times}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-12-06T12:24:40.019480" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:43.599565" elapsed="0.000000"/>
 </kw>
 <return>
 <value>${start_times}</value>
-<status status="PASS" start="2024-12-06T12:24:40.019480" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:43.599565" elapsed="0.000000"/>
 </return>
-<msg time="2024-12-06T12:24:40.019480" level="INFO">${ENDtimeslog} = ['12:30']</msg>
+<msg time="2024-12-16T14:18:43.599565" level="INFO">${ENDtimeslog} = ['14:23']</msg>
 <var>${ENDtimeslog}</var>
 <arg>${endtime}</arg>
-<status status="PASS" start="2024-12-06T12:24:39.979035" elapsed="0.040445"/>
+<status status="PASS" start="2024-12-16T14:18:43.559167" elapsed="0.040398"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-12-06T12:24:40.019480" level="INFO">All times: ['12:30']</msg>
+<msg time="2024-12-16T14:18:43.599565" level="INFO">All times: ['14:23']</msg>
 <arg>All times: ${ENDtimeslog}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-12-06T12:24:40.019480" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-16T14:18:43.599565" elapsed="0.000000"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${starttimeslog}</arg>
 <arg>${current_time}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-12-06T12:24:40.019480" elapsed="0.000000"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-06T12:24:42.027987" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-06T12:24:40.027483" elapsed="2.000504"/>
-</kw>
-<kw name="Click Element" owner="S">
-<msg time="2024-12-06T12:24:42.027987" level="INFO">Clicking element '//span[text()="12:24"]/../../..//button[2][@aria-label='Delete Downtime']'.</msg>
-<arg>//span[text()="${current_time}"]/../../..//button[2][@aria-label='Delete Downtime']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-06T12:24:42.027987" elapsed="0.145918"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="S">
-<arg>Event Deleted Successfully</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-12-06T12:24:42.173905" elapsed="0.471401"/>
+<status status="PASS" start="2024-12-16T14:18:43.599565" elapsed="0.000000"/>
 </kw>
 <kw name="Close Browser" owner="S">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-12-06T12:24:42.645306" elapsed="2.334920"/>
+<status status="PASS" start="2024-12-16T14:18:43.599565" elapsed="2.338897"/>
 </kw>
-<kw name="Wait Until Page Does Not Contain" owner="A">
-<arg>//android.view.View[contains(@content-desc, "00 IssueShutoff ${current_date}, ${current_time}")]</arg>
-<doc>Waits until `text` disappears from current page.</doc>
-<status status="PASS" start="2024-12-06T12:24:44.980226" elapsed="0.089588"/>
-</kw>
-<kw name="Close All Applications" owner="A">
-<doc>Closes all open applications.</doc>
-<status status="PASS" start="2024-12-06T12:24:45.069814" elapsed="0.401146"/>
-</kw>
-<status status="PASS" start="2024-12-06T12:23:19.801854" elapsed="85.669973"/>
+<status status="PASS" start="2024-12-16T14:17:24.198130" elapsed="81.740332"/>
 </test>
-<status status="PASS" start="2024-12-06T12:23:19.546895" elapsed="85.924932"/>
+<status status="PASS" start="2024-12-16T14:17:23.890883" elapsed="82.047579"/>
 </suite>
 <statistics>
 <total>
@@ -884,10 +871,10 @@ View More"]</msg>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Tests-Downtimedelete">Tests-Downtimedelete</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests-Downtimecreation">Tests-Downtimecreation</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-12-06T12:23:51.480227" level="WARN">Keyword 'A.Click Element At Coordinates' is deprecated. Since selenium v4, use other keywords.</msg>
+<msg time="2024-12-16T14:18:01.318066" level="WARN">Keyword 'A.Click Element At Coordinates' is deprecated. Since selenium v4, use other keywords.</msg>
 </errors>
 </robot>
